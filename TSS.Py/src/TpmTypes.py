@@ -16483,7 +16483,7 @@ class GetCapabilityResponse (RespStructure):
     @property
     def capabilityDataCapability(self): # TPM_CAP
         """ The capability """
-        return capabilityData.GetUnionSelector()
+        return self.capabilityData.GetUnionSelector()
 
     def toTpm(self, buf):
         """ TpmMarshaller method """
